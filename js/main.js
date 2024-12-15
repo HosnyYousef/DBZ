@@ -15,56 +15,6 @@
 
 
   //translate text to English
-  var btnTranslate = document.querySelector("button[name='btnTranslate']");
-
-  btnTranslate.addEventListener("click", TextTranslator);
-  
-  function TextTranslator(){
-      
-      var divTranslateContent = document.querySelector("div[id='category_description']");        
-          
-      var elements = document.querySelectorAll("h3");
-      
-      var translatedTexts = [];
-      
-      for (var i = 0; i < elements.length; i++) {
-          translatedTexts.push(elements[i].innerText);
-      }
-      
-      InvokeAPITranslator(translatedTexts.toString().replace(","," . "), ReplaceText, elements);
-      
-  }
-  
-  function ReplaceText(response, elementsP){
-      var arrayOfStrings = response.outputs[0].output.split(".");    
-      
-      for (var i = 0; i < arrayOfStrings.length; i++) {
-          elementsP[i].innerText = arrayOfStrings[i].trim();
-      }        
-  }
-  
-  function InvokeAPITranslator(textToTranslate, callback, elementsP){
-      
-      var settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate",
-        data: {
-              source: "en",
-              target: "pt",
-              input: textToTranslate,
-            },
-          "method": "GET",
-          "headers": {
-              "x-rapidapi-host": "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
-              "x-rapidapi-key": "7f58b5667bmshd95c9dc930cbf6ap1d0268jsnd64f23091817"
-          },
-      }
-  
-      $.ajax(settings).done(function (response) {
-        callback(response, elementsP)
-      });
-  }
 
 
 // List of random characters
@@ -113,7 +63,7 @@ setInterval (function getDrink(){
   .catch(err => {
           console.log(`error ${err}`)
   });
-}, 2000)
+}, 10000) // changes every 10 seconds
   // https://web.dragonball-api.com/documentation
 
 // const randomDrinks = [
