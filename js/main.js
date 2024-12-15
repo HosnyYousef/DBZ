@@ -23,7 +23,7 @@
       
       var divTranslateContent = document.querySelector("div[id='category_description']");        
           
-      var elements = document.querySelector("h3");
+      var elements = document.querySelectorAll("h3");
       
       var translatedTexts = [];
       
