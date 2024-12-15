@@ -32,12 +32,12 @@ body {
 /* LAYOUT
 /*******************************************/
 
-#google_translate_element,.skiptranslate{
+/* #google_translate_element, .skiptranslate {
   /* display:none; */
-  }
-  body{
-    top:0!important;
-  }
+  /* } */
+  /* body{
+    top: 0!important;
+  }  */
 
 img{
      display: block;
