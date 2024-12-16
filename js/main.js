@@ -1,4 +1,12 @@
 
+// dark mode toggle:
+
+// function myFunction() {
+//   var element = document.body;
+//   element.classList.toggle("dark-mode");
+// }
+
+
 // List of random characters
 const randomDrinks = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
@@ -39,7 +47,7 @@ setInterval (function getDrink(){
   .then(data => {
         console.log(data)
       document.querySelector('h2').innerText = data.name
-      document.querySelector('img').src = data.image
+      document.querySelector('#dbzImg').src = data.image
       document.querySelector('h3').innerText = data.description
   })
   .catch(err => {
