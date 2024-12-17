@@ -68,6 +68,13 @@ span {
 }
 
 
+audio {
+  width: 50%;
+  /* background-color: black;
+  color: white; */
+}
+
+
 /* ================ */
 /* toggle darkmode */
 

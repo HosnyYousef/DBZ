@@ -53,6 +53,6 @@ setInterval (function getDrink(){
   .catch(err => {
           console.log(`error ${err}`)
   });
-}, 2000) // changes every 10 seconds
+}, 10000) // changes every 10 seconds
   // https://web.dragonball-api.com/documentation
 
